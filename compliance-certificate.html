@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Certificate | Sachdeva Brothers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .certificate-page { padding: 80px 0; background: radial-gradient(circle at top left, rgba(232,67,10,.18), transparent 35%), #04040b; min-height: 100vh; color: #fff; }
+        .certificate-container { max-width: 980px; margin: 0 auto; }
+        .certificate-header { text-align: center; margin-bottom: 40px; }
+        .certificate-preview { background: #0b1121; border: 1px solid rgba(232,67,10,.25); border-radius: 28px; padding: 40px; box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+        .certificate-title { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+        .certificate-subtitle { color: rgba(255,255,255,.75); font-size: 1rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 30px; }
+        .certificate-body { background: rgba(255,255,255,.03); border: 1px dashed rgba(255,255,255,.12); border-radius: 24px; padding: 30px; }
+        .certificate-label { color: rgba(255,255,255,.65); text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; margin-bottom: 12px; }
+        .certificate-name { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .certificate-text { color: rgba(255,255,255,.75); line-height: 1.8; margin-bottom: 28px; }
+        .certificate-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+        .certificate-box { flex: 1 1 220px; padding: 24px; background: rgba(255,255,255,.02); border-radius: 18px; border: 1px solid rgba(255,255,255,.08); }
+        .certificate-box h6 { font-size: .95rem; margin-bottom: 10px; color: #fff; }
+        .certificate-box p { color: rgba(255,255,255,.6); font-size: .88rem; margin: 0; }
+        .certificate-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; }
+        .certificate-print { min-width: 180px; }
+        @media (max-width: 768px) {
+            .certificate-preview { padding: 30px 20px; }
+            .certificate-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <section class="certificate-page">
+        <div class="certificate-container">
+            <div class="certificate-header">
+                <span class="section-tag"><span class="tag-line"></span> Official Certificate <span class="tag-line"></span></span>
+                <h1 class="section-title">Compliance Certificate</h1>
+                <p class="section-desc">This certificate demonstrates the quality compliance and testing standards maintained by Sachdeva Brothers.</p>
+            </div>
+            <div class="certificate-preview">
+                <!-- Certificate Image Display -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="assets/certificate/compliance-certificate.jpg" alt="Compliance Certificate" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 2px solid rgba(232,67,10,0.2);" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display: none; padding: 60px 40px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 2px dashed rgba(255,255,255,0.2);">
+                        <i class="fas fa-image" style="font-size: 3rem; color: rgba(255,255,255,0.5); margin-bottom: 15px;"></i>
+                        <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 1.1rem;">Certificate image will be displayed here</p>
+                        <p style="color: rgba(255,255,255,0.5); margin: 10px 0 0 0; font-size: 0.9rem;">Place your certificate image at: assets/certificate/compliance-certificate.jpg</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate Name -->
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0;">Quality Compliance Certificate</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin: 8px 0 0 0;">Electrical & Mechanical Testing Authority</p>
+                </div>
+                <div class="certificate-actions">
+                    <a href="index.html" class="btn-outline-custom"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
