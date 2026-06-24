@@ -905,3 +905,56 @@ body.loaded .scroll-animate { opacity: 1; transform: translateY(0); }
     .showcase-image { width: 90px; }
     .banner-title { font-size: 1.2rem; }
                 }
+/* CONTACT FORM */
+
+.contact-form-section {
+    padding: 80px 20px;
+    background: #fff7f7;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 50px;
+    color: #2b2525;
+    margin-bottom: 10px;
+}
+
+.contact-form-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-form-section form {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form-section textarea {
+    height: 180px;
+}
+
+.contact-form-section button {
+    width: 100%;
+    padding: 18px;
+    background: #E8430A;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.contact-form-section button:hover {
+    background: #c73808;
+}
