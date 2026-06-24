@@ -484,7 +484,7 @@ if (window.innerWidth <= 767) {
         <h2>Drop us message</h2>
         <p>We will connect you within an hour.</p>
 
-        <form action="https://formsubmit.co/Sachdevaautoparts@gmail.com" method="POST">
+     <form action="https://formsubmit.co/ajax/Sachdevaautoparts@gmail.com" method="POST" id="contactForm">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="company" placeholder="Company Name">
@@ -496,6 +496,19 @@ if (window.innerWidth <= 767) {
 <input type="hidden" name="_next" value="https://www.sachdevabrothers.com/thankyou.html">
             <button type="submit">Send Message</button>
         </form>
+        <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    fetch(this.action, {
+        method: "POST",
+        body: new FormData(this)
+    }).then(() => {
+        window.location.href = "thankyou.html";
+    });
+});
+</script>
+        
     </div>
 </section>
 
