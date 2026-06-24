@@ -502,9 +502,19 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     fetch(this.action, {
         method: "POST",
-        body: new FormData(this)
-    }).then(() => {
-        window.location.href = "thankyou.html";
+        body: new FormData(this),
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = "/thankyou.html";
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        alert("Something went wrong. Please try again.");
     });
 });
 </script>
