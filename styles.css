@@ -958,3 +958,11 @@ body.loaded .scroll-animate { opacity: 1; transform: translateY(0); }
 .contact-form-section button:hover {
     background: #c73808;
 }
+.contact-form-section select {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
