@@ -215,65 +215,101 @@
     </div>
 
     <h2 class="m-section-title">
-        Get In<br>
-        <span class="m-highlight">Touch</span>
+        Drop us<br>
+        <span class="m-highlight">Message</span>
     </h2>
 
-    <div class="m-contact-cards">
+    <form action="https://formsubmit.co/ajax/Sachdevaautoparts@gmail.com" method="POST" id="mobileContactForm" style="display:flex;flex-direction:column;gap:12px;">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="company" placeholder="Company Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10,15}" title="Please enter a valid phone number" required>
+
+        <select name="product" required>
+            <option value="">Select Product</option>
+            <option value="Wiring Harness">Wiring Harness</option>
+            <option value="Battery Cable">Battery Cable</option>
+            <option value="Fuse Box">Fuse Box</option>
+            <option value="Wires & Cables">Wires & Cables</option>
+        </select>
+
+        <textarea name="message" placeholder="Write your message" required></textarea>
+
+        <input type="hidden" name="_subject" value="New Mobile Website Enquiry - Sachdeva Brothers">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <br>
+
+    <button id="mobileWhatsappBtn" style="width:100%;padding:14px;border:none;border-radius:10px;background:#25D366;color:white;font-weight:700;">
+        <i class="fab fa-whatsapp"></i> Send on WhatsApp
+    </button>
+
+    <div class="m-contact-cards" style="margin-top:20px;">
         <a href="tel:+919780380300" class="m-contact-card">
-            <div class="m-contact-icon">
-                <i class="fas fa-phone-alt"></i>
-            </div>
-            <div>
-                <h4>Call Us</h4>
-                <p>+91 9780380300</p>
-            </div>
+            <div class="m-contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div><h4>Call Us</h4><p>+91 9780380300</p></div>
         </a>
 
         <a href="mailto:Sachdevaautoparts@gmail.com" class="m-contact-card">
-            <div class="m-contact-icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div>
-                <h4>Email Us</h4>
-                <p>Sachdevaautoparts@gmail.com</p>
-            </div>
+            <div class="m-contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email Us</h4><p>Sachdevaautoparts@gmail.com</p></div>
         </a>
     </div>
-
-    <div class="m-address">
-        <i class="fas fa-map-marker-alt"></i>
-        <p>2562, Street No. 6, Jammu Colony, Ludhiana, Punjab - 141003</p>
-    </div>
-
-    <!-- MAP SECTION -->
-    <div style="margin-top:20px;">
-        <h3 style="font-size:20px;font-weight:700;margin-bottom:15px;text-align:center;">
-            <i class="fas fa-map-marker-alt"></i> Our Location
-        </h3>
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.835224784209!2d75.8509148!3d30.891270200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83aad9b6fbf5%3A0x2eec4d90ccc1f223!2s2562%2C%20Street%20Number%206%2C%20Kamla%20Nagar%2C%20Jammu%20Colony%2C%20Ludhiana%2C%20Punjab%20141002!5e0!3m2!1sen!2sin!4v1775296392645!5m2!1sen!2sin"
-            width="100%"
-            height="300"
-            style="border:0;border-radius:15px;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
 </section>
-        <div class="m-section-label"><span class="m-label-line"></span><span>CONTACT</span></div>
-        <h2 class="m-section-title">Get In<br><span class="m-highlight">Touch</span></h2>
-        <div class="m-contact-cards">
-            <a href="tel:+919780380300" class="m-contact-card"><div class="m-contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Call Us</h4><p>+91 9780380300</p></div></a>
-            <a href="mailto:Sachdevaautoparts@gmail.com" class="m-contact-card"><div class="m-contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email Us</h4><p>Sachdevaautoparts@gmail.com</p></div></a>
-        </div>
-        <div class="m-address">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>2562, street no.6, Jammu colony, Ludhiana, Punjab-141003</p>
-        </div>
-    </section>
+
+<script>
+document.getElementById("mobileContactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    fetch(this.action, {
+        method: "POST",
+        body: new FormData(this),
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = "/thankyou.html";
+        } else {
+            alert("Message send nahi hoya. Please try again.");
+        }
+    })
+    .catch(error => {
+        alert("Something went wrong. Please try again.");
+    });
+});
+
+document.getElementById("mobileWhatsappBtn").addEventListener("click", function() {
+    let form = document.getElementById("mobileContactForm");
+
+    let name = form.name.value;
+    let email = form.email.value;
+    let company = form.company.value;
+    let phone = form.phone.value;
+    let product = form.product.value;
+    let message = form.message.value;
+
+    if (!name || !email || !company || !phone || !product || !message) {
+        alert("Please saari details fill karo.");
+        return;
+    }
+
+    let whatsappMessage =
+        "New Enquiry from Website:%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Company: " + company + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Product: " + product + "%0A" +
+        "Message: " + message;
+
+    window.open("https://wa.me/919780380300?text=" + whatsappMessage, "_blank");
+});
+</script>
 
     <footer class="m-footer">
         <div class="m-footer-logo">
