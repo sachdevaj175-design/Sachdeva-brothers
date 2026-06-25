@@ -629,13 +629,15 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
                 <div class="wa-chat-bubble"><p>Hello! 👋 Welcome to Sachdeva Brothers. How can we help you today?</p><span class="wa-time">Just now</span></div>
                 <form class="wa-form" id="waForm">
                     <div class="wa-form-group"><input type="text" placeholder="Your Name *" required class="wa-input" id="waName"></div>
-                    <div class="wa-form-group"><input type="tel"
-       placeholder="Mobile Number *"
-       required
-       pattern="[0-9]{10,15}"
-       title="Please enter a valid phone number"
-       class="wa-input"
-       id="waMobile">
+         <div class="wa-form-group">
+<input type="tel"
+placeholder="Mobile Number *"
+required
+pattern="[0-9]{10,15}"
+title="Please enter a valid phone number"
+class="wa-input"
+id="waMobile">
+</div>
                     <div class="wa-form-group"><input type="text" placeholder="Company Name *" required class="wa-input" id="waCompany"></div>
                     <div class="wa-form-group"><input type="email" placeholder="Email Address *" required class="wa-input" id="waEmail"></div>
                     <div class="wa-form-group">
