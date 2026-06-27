@@ -521,10 +521,14 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         }
     })
     .then(response => {
-        if (response.ok) {
-            window.location.href = "/thankyou.html";
-        }
-    })
+    if (response.ok) {
+
+        alert("✅ Thank you for contacting Sachdeva Brothers!\n\nWe have received your enquiry successfully.\nOur team will contact you within 1 hour.");
+
+        document.getElementById("contactForm").reset();
+
+    }
+})
     .catch(error => {
         console.log(error);
         alert("Something went wrong. Please try again.");
