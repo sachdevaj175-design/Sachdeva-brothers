@@ -520,12 +520,17 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
             "Accept": "application/json"
         }
     })
-    .then(response => {
+  .then(response => {
     if (response.ok) {
 
         alert("✅ Thank you for contacting Sachdeva Brothers!\n\nWe have received your enquiry successfully.\nOur team will contact you within 1 hour.");
 
         document.getElementById("contactForm").reset();
+
+        window.open(
+            "https://wa.me/919780380300?text=Hello%20Sachdeva%20Brothers%2C%20I%20have%20submitted%20an%20enquiry%20on%20your%20website.%20Please%20contact%20me.",
+            "_blank"
+        );
 
     }
 })
