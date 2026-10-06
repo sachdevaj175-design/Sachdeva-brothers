@@ -14,14 +14,42 @@
         .agri-tag{color:#E8430A;font-weight:700;letter-spacing:1px;text-transform:uppercase}
         .model-card{height:100%;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 35px rgba(0,0,0,.08);transition:.25s}
         .model-card:hover{transform:translateY(-5px)}
-        .model-image{height:240px;background:#f1f1f1;display:flex;align-items:center;justify-content:center}
+        .model-image{height:240px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;overflow:hidden}
         .model-image img{width:100%;height:100%;object-fit:cover}
         .model-placeholder{height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#777;gap:12px}
         .model-placeholder i{font-size:50px;color:#E8430A}
         .model-body{padding:24px}
         .model-body h3{font-size:22px;margin-bottom:10px}
-        .model-body p{color:#666;margin:0}
+        .model-body p{color:#666;margin:0;line-height:1.7}
         .back-link{display:inline-flex;align-items:center;gap:8px;margin-top:25px;color:#E8430A;text-decoration:none;font-weight:600}
+
+        /* 4 agriculture model cards in one row on desktop */
+        .agri-models-row{
+            display:grid !important;
+            grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+            gap:24px !important;
+            width:100% !important;
+            align-items:stretch !important;
+        }
+        .agri-models-row .model-card-wrap{
+            min-width:0;
+            width:100%;
+        }
+        .agri-models-row .model-card{
+            width:100%;
+        }
+
+        @media (max-width:991px){
+            .agri-models-row{
+                grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+            }
+        }
+
+        @media (max-width:575px){
+            .agri-models-row{
+                grid-template-columns:1fr !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -112,120 +140,132 @@
 
     <section class="py-5">
         <div class="container">
+
             <div class="text-center mb-5">
-                <span class="section-tag center"><span class="tag-line"></span> Our Models <span class="tag-line"></span></span>
-                <h2 class="section-title mt-3">Agricultural Machinery <span class="highlight">Harnesses</span></h2>
-                <p class="section-desc">Photos and exact model specifications can be added here once you provide them.</p>
+                <span class="section-tag center">
+                    <span class="tag-line"></span> Our Models <span class="tag-line"></span>
+                </span>
+
+                <h2 class="section-title mt-3">
+                    Agricultural Machinery <span class="highlight">Harnesses</span>
+                </h2>
+
+                <p class="section-desc">
+                    Custom wiring harness solutions for agricultural machinery,
+                    manufactured according to your drawings, samples and application requirements.
+                </p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
+            <div class="agri-models-row">
+
+                <!-- 1. Baler Wiring Harness -->
+                <div class="model-card-wrap">
                     <div class="model-card">
                         <div class="model-image">
-                            <img src="assets/products/agriculture/baler-wiring-harness.jpg" alt="Baler Wiring Harness" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="model-placeholder"><i class="fas fa-tractor"></i><span>Baler Wiring Harness</span></div>
+                            <img
+                                src="assets/products/agriculture/baler-wiring-harness.jpg"
+                                alt="Baler Wiring Harness"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="model-placeholder">
+                                <i class="fas fa-tractor"></i>
+                                <span>Baler Wiring Harness</span>
+                            </div>
                         </div>
+
                         <div class="model-body">
                             <h3>Baler Wiring Harness</h3>
-                            <p>Wiring harness solutions for baler machinery and related electrical systems.</p>
+                            <p>
+                                Reliable wiring harness solutions for baler machinery,
+                                designed for secure electrical connectivity and durable
+                                performance in demanding agricultural applications.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-<!-- Super Seeder Wiring Harness -->
-<div class="col-lg-3 col-md-6">
-    <div class="model-card">
+                <!-- 2. Super Seeder Wiring Harness -->
+                <div class="model-card-wrap">
+                    <div class="model-card">
+                        <div class="model-image" style="aspect-ratio:3 / 2;height:auto;background:#fff;">
+                            <img
+                                src="assets/products/super-seeder-wiring-harness.png"
+                                alt="Super Seeder Wiring Harness"
+                                style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="model-placeholder" style="display:none;">
+                                <i class="fas fa-seedling"></i>
+                                <span>Super Seeder Wiring Harness</span>
+                            </div>
+                        </div>
 
-        <!-- Super Seeder + Wiring Harness Image -->
-        <div class="model-image" style="
-            height:auto;
-            aspect-ratio:3 / 2;
-            background:#ffffff;
-            overflow:hidden;
-        ">
+                        <div class="model-body">
+                            <h3>Super Seeder Wiring Harness</h3>
+                            <p>
+                                Precision-engineered wiring harness solutions for Super Seeder
+                                machinery, designed for reliable electrical connectivity and
+                                long-lasting performance in demanding agricultural conditions.
+                                We manufacture customized harnesses according to machine
+                                drawings, samples, connectors, terminals, wire specifications,
+                                routing requirements and application needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <img
-                src="assets/products/super-seeder-wiring-harness.png"
-                alt="Super Seeder Wiring Harness"
-                style="
-                    width:100%;
-                    height:100%;
-                    object-fit:cover;
-                    object-position:center;
-                    display:block;
-                "
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-            >
-
-            <div class="model-placeholder" style="display:none;">
-                <i class="fas fa-seedling"></i>
-                <span>Super Seeder Wiring Harness</span>
-            </div>
-
-        </div>
-
-        <!-- Description -->
-        <div class="model-body">
-
-            <h3>Super Seeder Wiring Harness</h3>
-
-            <p>
-                Precision-engineered wiring harness solutions for Super Seeder
-                machinery, designed for reliable electrical connectivity and
-                long-lasting performance in demanding agricultural conditions.
-                We manufacture customized harnesses according to machine
-                drawings, samples, connectors, terminals, wire specifications,
-                routing requirements and application needs.
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-        <div class="model-body">
-
-            <h3>Super Seeder Wiring Harness</h3>
-
-            <p>
-                Precision-engineered wiring harness solutions for Super Seeder
-                machinery, designed for reliable electrical connectivity and
-                long-lasting performance in demanding agricultural conditions.
-                We manufacture customized harnesses according to machine
-                drawings, samples, connectors, terminals, wire specifications,
-                routing requirements and application needs.
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-                <div class="col-lg-3 col-md-6">
+                <!-- 3. Combine Harvester Wiring Harness -->
+                <div class="model-card-wrap">
                     <div class="model-card">
                         <div class="model-image">
-                            <img src="assets/products/agriculture/combine-harvester-wiring-harness.jpg" alt="Combine Harvester Wiring Harness" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="model-placeholder"><i class="fas fa-wheat-awn"></i><span>Combine Harvester Wiring Harness</span></div>
+                            <img
+                                src="assets/products/agriculture/combine-harvester-wiring-harness.jpg"
+                                alt="Combine Harvester Wiring Harness"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="model-placeholder">
+                                <i class="fas fa-wheat-awn"></i>
+                                <span>Combine Harvester Wiring Harness</span>
+                            </div>
                         </div>
+
                         <div class="model-body">
                             <h3>Combine Harvester Wiring Harness</h3>
-                            <p>Machine-specific wiring harness assemblies for combine harvesters.</p>
+                            <p>
+                                Machine-specific wiring harness assemblies for combine harvesters,
+                                engineered for dependable connections, organized routing and
+                                reliable operation in demanding field conditions.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <!-- 4. Other Agricultural Machinery Wiring Harness -->
+                <div class="model-card-wrap">
                     <div class="model-card">
                         <div class="model-image">
-                            <img src="assets/products/agriculture/other-agricultural-machinery-wiring-harness.jpg" alt="Other Agricultural Machinery Wiring Harness" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="model-placeholder"><i class="fas fa-gears"></i><span>Other Agricultural Machinery</span></div>
+                            <img
+                                src="assets/products/agriculture/other-agricultural-machinery-wiring-harness.jpg"
+                                alt="Other Agricultural Machinery Wiring Harness"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="model-placeholder">
+                                <i class="fas fa-gears"></i>
+                                <span>Other Agricultural Machinery</span>
+                            </div>
                         </div>
+
                         <div class="model-body">
                             <h3>Other Agricultural Machinery Wiring Harness</h3>
-                            <p>Customized harnesses for tractors and other agricultural machines according to drawings or samples.</p>
+                            <p>
+                                Customized wiring harnesses for tractors and other agricultural
+                                machines, manufactured according to drawings, samples, connectors,
+                                terminals and specific machine requirements.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
